@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="libtango_3d_reconstruction_api:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/libtango_3d_reconstruction_api.aar/a5bdab548dc794e6c88fed6b80735e1e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/libtango_3d_reconstruction_api.aar/a5bdab548dc794e6c88fed6b80735e1e/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lighting_estimation:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lighting_estimation.aar/35a531fe34b74fb497d16d776f4f2f95/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lighting_estimation.aar/35a531fe34b74fb497d16d776f4f2f95/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

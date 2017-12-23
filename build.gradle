@@ -1,0 +1,71 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+
+allprojects {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.application'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(name: 'libtango_3d_reconstruction_api', ext: 'aar')
+    implementation(name: 'lighting_estimation', ext: 'aar')
+    implementation(name: 'unityandroidpermissions', ext: 'aar')
+    implementation(name: 'unitygar', ext: 'aar')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.stepstone.stepper:material-stepper:4.3.1'
+    implementation 'uk.co.samuelwall:material-tap-target-prompt:2.5.1'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+}
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.2'
+
+    defaultConfig {
+        targetSdkVersion 27
+        applicationId 'com.kekland.apatta'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    aaptOptions {
+        noCompress '.unity3d', '.ress', '.resource', '.obb'
+    }
+
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'
+            signingConfig signingConfigs.debug
+        }
+    }
+
+}
